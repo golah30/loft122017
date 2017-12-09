@@ -1,0 +1,12 @@
+.menu {
+  margin: 0;
+  display: flex;
+  li {
+    display: inline-block;
+
+    margin-left: 20px;
+    a {
+      color: red;
+    }
+  }
+}
