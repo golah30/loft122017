@@ -91,7 +91,7 @@ function server() {
   browserSync.init({
     server: paths.dest
   });
-  browserSync.watch(paths.dest + '/**/*.*', browserSync.reload);
+  browserSync.watch(paths.dest + '/**/*.*').on('change', browserSync.reload);
 }
 
 gulp.task(
@@ -99,6 +99,6 @@ gulp.task(
   gulp.series(
     clean,
     gulp.parallel(styles, pages, img, scripts),
-    gulp.parallel(watch, server)
+    gulp.parallel(server, watch)
   )
 );
