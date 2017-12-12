@@ -4,7 +4,7 @@
 
 ### К сборке добавил babel и postcss ( autoprefixer )
 
-###### Установка
+### Установка
 
 1. clone this repo
 2. npm i
