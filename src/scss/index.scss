@@ -1,6 +1,20 @@
+.welcome-wrap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url('../img/bg.jpg');
+  background-size: cover;
+}
 .welcome-block {
-    box-sizing: border-box;
-    width: 380px;
-    height: 395px;
-    padding-top: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  width: 380px;
+  height: 395px;
+  padding-top: 40px;
+  background-color: #ffffff;
+  opacity: 0.85;
+  border-radius: 5px;
 }

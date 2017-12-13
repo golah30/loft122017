@@ -4,12 +4,12 @@ block var
     - var title = 'Добро пожаловать'
 
 block content
-    h1 Главная страничка11111
-    include ../modules/auth-button.pug
-    .welcome-block
-        .welcome__persone
-            include ../modules/persone.pug
-        .welcome__social
-            include ../modules/socials.pug
-        .welcome__menu
-            include ../modules/menu.pug
+    .welcome-wrap
+        include ../modules/auth-button.pug
+        .welcome-block
+            .welcome__persone
+                include ../modules/persone.pug
+            .welcome__social
+                include ../modules/socials.pug
+            .welcome__menu
+                include ../modules/menu.pug
