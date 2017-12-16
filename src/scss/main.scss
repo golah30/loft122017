@@ -1,5 +1,5 @@
 @import 'normalize';
-
+@import 'fonts';
 html,
 body {
   height: 100%;
@@ -8,7 +8,5 @@ body {
   box-sizing: border-box;
 }
 
-@import 'modules/menu';
 @import 'index';
-@import 'modules/auth-button';
-@import 'modules/persone';
+@import 'login';

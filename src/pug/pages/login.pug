@@ -1,9 +1,19 @@
 extends ../main.pug
+include ../modules/title.pug
 
 block var
     - var title = 'Авторизация'
 
 block content
-    .d saa11123ss12
-    form.login(action="post")
-        input(type="text")
+    .welcome-wrap
+        .welcome-block
+            .wel-bg
+            .login-title
+                +title('Авторизуйтесь')
+
+            .auth-block
+                include ../modules/auth-form.pug
+            .welcome__menu
+                include ../modules/auth-menu.pug
+        .welcome-text
+           span © Владимир Астахов | создано с любовью в LoftSchool | 2016

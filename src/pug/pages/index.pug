@@ -5,11 +5,15 @@ block var
 
 block content
     .welcome-wrap
-        include ../modules/auth-button.pug
+        .welcome-auth-block
+            include ../modules/auth-button.pug
         .welcome-block
+            .wel-bg
             .welcome__persone
                 include ../modules/persone.pug
             .welcome__social
                 include ../modules/socials.pug
             .welcome__menu
                 include ../modules/menu.pug
+        .welcome-text
+           span © Владимир Астахов | создано с любовью в LoftSchool | 2016

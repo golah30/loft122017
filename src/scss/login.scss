@@ -1,0 +1,11 @@
+@import 'modules/auth-menu';
+@import 'modules/title';
+@import 'modules/auth-form';
+
+.login-title,
+.auth-block {
+  text-align: center;
+}
+.login-title {
+  margin-bottom: 40px;
+}

@@ -1,42 +1,33 @@
 .persone-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: auto;
 }
 .persone__name {
-    color: #455a64;
-    font-size: 28px;
-    margin-bottom: 10px;
+  color: #455a64;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
 }
-.persone__desc{
-    color: #455a64;
-    font-size: 16px;
+.persone__desc {
+  color: #455a64;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
 }
 .persone__avatar {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 140px;
-    height: 140px;
-    margin-bottom: 20px;
-    img {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-
-
-.Владимир_Астахо_ {
-    font-size: 28px;
-    font-family: "Roboto";
-    color: rgb(69, 90, 100);
-    line-height: 1.214;
-    text-align: center;
-    position: absolute;
-    left: 773.937px;
-    top: 475.568px;
-    z-index: 15;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    height: 100%;
   }
-  
+}

@@ -36,6 +36,10 @@ const paths = {
   scripts: {
     src: './src/js/**/*.js',
     dest: './build/js/'
+  },
+  fonts: {
+    src: './src/fonts/**/*.*',
+    dest: './build/fonts/'
   }
 };
 
@@ -68,6 +72,9 @@ function clean() {
 function img() {
   return gulp.src(paths.img.src).pipe(gulp.dest(paths.img.dest));
 }
+function fonts() {
+  return gulp.src(paths.fonts.src).pipe(gulp.dest(paths.fonts.dest));
+}
 
 // webpack + gulp-babel
 function scripts() {
@@ -98,7 +105,7 @@ gulp.task(
   'default',
   gulp.series(
     clean,
-    gulp.parallel(styles, pages, img, scripts),
+    gulp.parallel(styles, pages, img, scripts, fonts),
     gulp.parallel(server, watch)
   )
 );
