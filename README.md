@@ -2,8 +2,6 @@
 
 ## Куриленко Дмитрий
 
-### К сборке добавил babel и postcss ( autoprefixer )
-
 ### Установка
 
 1. clone this repo
