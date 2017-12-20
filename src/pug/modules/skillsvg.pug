@@ -1,0 +1,8 @@
+mixin skill_title(title)
+    h3.skill-title=title
+
+mixin skill_item(title, className)
+    svg(class="circles" viewBox="0 0 110 110")
+        circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+        circle.circle__second(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=className)
+    .skill_item__title=title

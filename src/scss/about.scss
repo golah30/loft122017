@@ -1,3 +1,8 @@
+@import 'modules/title';
+@import 'modules/socials';
+@import 'modules/skills';
+@import 'modules/footer';
+@import 'modules/contacts';
 .about-hero {
   min-height: 600px;
   height: 100vh;
@@ -119,6 +124,7 @@
 }
 .container-right {
   padding-left: 60px;
+  padding-right: 60px;
   background-color: #eeebdf;
 }
 
@@ -172,6 +178,7 @@
 }
 
 .about-skills__title {
+  margin: 0 auto;
   text-align: center;
   width: 220px;
   margin-bottom: 40px;
@@ -195,4 +202,49 @@
     line-height: 24px;
     font-size: 16px;
   }
+}
+.skills__group {
+  margin-bottom: 40px;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+.skills-list__item {
+  margin-right: 40px;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.about-contacts {
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+}
+
+.contacts-block {
+  position: absolute;
+  text-align: center;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  transform: translate(-50%, -50%);
+}
+.contacts__title {
+  margin-bottom: 40px;
+}
+
+.about-contacts__map {
+  height: 100%;
+  color: #38414e;
 }
