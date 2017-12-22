@@ -1,0 +1,41 @@
+extends ../main.pug
+include ../modules/footer.pug
+include ../modules/title.pug
+include ../modules/note.pug
+
+block var
+    - var title = 'Мои работы'
+
+block content
+    section.about-hero
+        .container
+            .svg-background
+                img(src="./img/portfolio_header.svg", alt="")
+            .hero__persone.hero__persone--bigger
+                include ../modules/persone.pug
+            .hero__socials.hero__socials--white
+                include ../modules/socials.pug
+            a.hero__arrow(href='#')
+                img(src="./img/arrow.svg", alt="")
+            .hamburger
+                img(src="./img/hamburger.svg")
+    section.works
+        .container-svg-triangles
+            include ../modules/triangle.pug
+    section.feedback
+        .feedback-bg
+            img(src="./img/feedback.png", alt="")
+        .feedback-title
+            img(src="./img/icons/about_header.svg", alt="")
+            +title('Что обо мне Говорят')
+        .feedback-notes
+            +note('Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!', 'Ковальчук Дмитрий', 'основатель LoftSchool', './img/dk.png')
+            +note('Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!', 'Сабанцев Владимир', 'преподаватель', './img/vs.png')
+        .feedback-form-block
+            .filter
+                svg(viewbox="0 0 100 100")
+                    defs
+                        filter(id="blur")  
+                            feGaussianBlur(stdDeviation="10")
+                    rect(x="0" y="0" width="100" height="100" filter="url(#blur)" style="fill-opacity: 1; fill: red;")
+        +footer(1)

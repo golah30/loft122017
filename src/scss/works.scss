@@ -1,0 +1,88 @@
+@import 'modules/note';
+.works {
+  position: relative;
+  height: 100vh;
+  background: red;
+  .container-svg-triangles {
+    .right {
+      fill: #ffffff;
+    }
+    .left {
+      fill: #ffffff;
+    }
+  }
+}
+
+.feedback {
+  position: relative;
+  overflow: hidden;
+  //   background: url('../img/feedback.png');
+  //   background-size: 100% 100%;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 150px;
+}
+.feedback-bg {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  img {
+    position: absolute;
+    bottom: -500px;
+  }
+}
+.feedback-title {
+  z-index: 20;
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  width: 273px;
+  text-align: center;
+  .block-title {
+    &::after {
+      top: calc(35px - 2.5px);
+    }
+    &::before {
+      top: calc(35px - 2.5px);
+    }
+    font-size: 63px;
+  }
+  img {
+    position: absolute;
+    height: 170px;
+    width: 500px;
+    top: -30px;
+    left: 54%;
+    transform: translateX(-50%);
+  }
+}
+
+.feedback-notes {
+  z-index: 20;
+  display: flex;
+}
+.feedback-form-block {
+  z-index: 20;
+  position: relative;
+  width: 380px;
+  height: 440px;
+}
+.filter {
+  position: absolute;
+  top: 0;
+  z-index: 30;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

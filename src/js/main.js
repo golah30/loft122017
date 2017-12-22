@@ -5,6 +5,7 @@ mod(3);
 var map = new google.maps.Map(document.querySelector('.about-contacts__map'), {
   center: { lat: 48.575, lng: 35.09 },
   zoom: 17,
+  scrollwheel: false,
   styles: [
     { elementType: 'geometry', stylers: [{ color: '#ffffff' }] },
     {
