@@ -10,7 +10,21 @@ body {
 * {
   box-sizing: border-box;
 }
-
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin note() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin phone() {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
 @import 'index';
 @import 'login';
 @import 'about';

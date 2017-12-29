@@ -6,12 +6,14 @@
 .about-hero {
   min-height: 600px;
   height: 100vh;
+  width: 100vw;
   background: url('../img/bg.jpg');
   background-size: cover;
   position: relative;
 }
 
 .container {
+  width: 100vw;
   height: 100%;
   position: relative;
   background: rgba(38, 166, 154, 0.25);
@@ -38,17 +40,31 @@
   .persone__name {
     color: #ffffff;
     font-size: 35px;
+    @include phone() {
+      font-size: 21px;
+      width: 220px;
+      text-align: center;
+    }
   }
   .persone__desc {
     color: #ffffff;
     opacity: 0.8;
     font-weight: 300;
+    @include phone() {
+      font-size: 14px;
+      width: 220px;
+      text-align: center;
+    }
   }
 }
 .hero__socials {
   position: absolute;
   top: 30px;
   left: 30px;
+  @include phone() {
+    top: 10px;
+    left: 10px;
+  }
 }
 .hero__socials--white {
   .social__link {
@@ -88,16 +104,37 @@
   img {
     width: 100%;
   }
+  @include phone() {
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 22px;
+  }
 }
 .about-desc {
   display: flex;
   position: relative;
+  width: 100vw;
+  @include tablets() {
+    flex-wrap: wrap;
+  }
+  align-items: stretch;
 }
 .container-left,
 .container-right {
   width: 50%;
-
   min-height: 835px;
+  @include note() {
+    min-width: 360px;
+  }
+  @include tablets() {
+    width: 100%;
+  }
+
+  @include phone() {
+    min-width: 100%;
+    min-height: 100vh;
+  }
 }
 .container-svg-triangles {
   height: 180px;
@@ -110,6 +147,9 @@
   position: absolute;
   .right {
     fill: #eeebdf;
+    @include tablets() {
+      fill: #efeee9;
+    }
   }
   .left {
     fill: #efeee9;
@@ -126,6 +166,19 @@
   padding-left: 60px;
   padding-right: 60px;
   background-color: #eeebdf;
+  @include tablets() {
+    padding-top: 50px;
+    text-align: center;
+  }
+  @include note() {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include phone() {
+    padding-top: 30px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
 }
 
 .about-desc-title {
@@ -133,9 +186,14 @@
   width: 360px;
   text-align: center;
   margin-bottom: 40px;
-
+  @include phone() {
+    width: 100%;
+  }
   .block-title {
     font-size: 63px;
+    @include phone() {
+      font-size: 35px;
+    }
   }
 }
 .about-desc-title__svg-back {
@@ -145,26 +203,59 @@
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
+  @include phone() {
+    height: 65px;
+    top: -15px;
+  }
 }
 
 .about-desc-content {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 490px;
+  max-width: 445px;
+  @include tablets() {
+    max-width: 480px;
+  }
+  @include phone() {
+    width: 100%;
+  }
 }
 
 .about-content__avatar {
-  width: 445px;
+  width: 100%;
   height: 390px;
   margin-bottom: 40px;
+  img {
+    width: 100%;
+  }
+  @include tablets() {
+    height: auto;
+  }
+  @include phone() {
+    margin-bottom: 30px;
+  }
 }
 
 .about-content__title {
   margin-bottom: 40px;
+  @include tablets() {
+    margin-bottom: 20px;
+  }
+  @include phone() {
+    .block-title {
+      font-size: 21px;
+    }
+  }
 }
 .about-content__desc {
   width: 445px;
+  @include tablets() {
+    width: 480px;
+  }
+  @include phone() {
+    width: 95%;
+  }
   p {
     padding: 0;
     margin: 0;
@@ -174,6 +265,9 @@
     line-height: 24px;
     font-size: 16px;
     margin-bottom: 20px;
+    @include tablets() {
+      font-size: 14px;
+    }
   }
 }
 
@@ -190,6 +284,15 @@
       top: calc(20px - 2.5px);
     }
   }
+  @include tablets() {
+    margin-bottom: 20px;
+  }
+  @include phone() {
+    .block-title {
+      width: 135px;
+      font-size: 21px;
+    }
+  }
 }
 .skills__desc {
   margin-bottom: 60px;
@@ -201,10 +304,22 @@
     font-style: normal;
     line-height: 24px;
     font-size: 16px;
+    @include tablets() {
+      font-size: 14px;
+    }
+  }
+  @include tablets() {
+    display: inline-block;
+    max-width: 480px;
+    text-align: justify;
+    margin-bottom: 50px;
+  }
+  @include phone() {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
 .skills__group {
-  margin-bottom: 40px;
 }
 .skills-list {
   display: flex;
@@ -213,12 +328,31 @@
   margin: 0;
   padding: 0;
   margin-top: 20px;
+  text-align: center;
+  @include tablets() {
+    justify-content: center;
+  }
+  @include phone() {
+    justify-content: space-around;
+  }
 }
 .skills-list__item {
   margin-right: 40px;
+  margin-bottom: 40px;
   position: relative;
+  display: inline-block;
+  text-align: center;
   width: 120px;
   height: 120px;
+
+  @include note() {
+    width: 110px;
+    height: 110px;
+  }
+  @include phone() {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
   &:last-child {
     margin-right: 0;
   }
@@ -226,8 +360,11 @@
 
 .about-contacts {
   height: 100vh;
-  min-height: 600px;
+  min-height: 900px;
   position: relative;
+  @include phone() {
+    min-height: 850px;
+  }
 }
 
 .contacts-block {
@@ -239,9 +376,18 @@
   padding: 40px;
   background: rgba(255, 255, 255, 0.85);
   transform: translate(-50%, -50%);
+  @include phone() {
+    top: 0;
+    transform: translate(-50%);
+    width: 100%;
+    padding: 30px 10px;
+  }
 }
 .contacts__title {
   margin-bottom: 40px;
+  @include phone() {
+    margin-bottom: 20px;
+  }
 }
 
 .about-contacts__map {

@@ -5,6 +5,12 @@
   width: 100%;
   background: rgba(#555b5e, 0.85);
   z-index: 100;
+  @include tablets() {
+    height: 240px;
+  }
+  @include phone() {
+    height: 270px;
+  }
 }
 .footer-up,
 .footer-down {
@@ -14,9 +20,26 @@
   align-items: center;
   height: 50%;
   width: 100%;
+  @include tablets() {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  @include phone() {
+    height: 150px;
+    padding: 0 10px;
+  }
+}
+.footer-left {
+  @include tablets() {
+    margin-bottom: 20px;
+  }
 }
 .footer-up {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  @include phone() {
+    height: 120px;
+  }
 }
 
 .footer-menu {
@@ -38,6 +61,9 @@
       }
     }
   }
+  @include phone() {
+    margin-right: 10px;
+  }
 }
 .footer-menu__link {
   text-decoration: none;
@@ -48,6 +74,9 @@
   font-size: 16px;
   &:hover {
     text-decoration: underline;
+  }
+  @include phone() {
+    font-size: 13px;
   }
 }
 
@@ -120,4 +149,20 @@
 }
 .footer__desc {
   width: 500px;
+  @include tablets() {
+    width: 100%;
+    text-align: center;
+  }
+  @include phone() {
+    font-size: 13px;
+  }
+}
+.footer__copy {
+  @include tablets() {
+    width: 100%;
+    text-align: center;
+  }
+  @include phone() {
+    font-size: 13px;
+  }
 }
