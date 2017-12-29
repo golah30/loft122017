@@ -30,6 +30,15 @@
     background: #c4cacc;
     top: calc(20px - 2.5px);
   }
+  @include tablets {
+    width: 100%;
+    max-width: 400px;
+    font-size: 30px;
+  }
+  @include phone() {
+    font-size: 21px;
+    max-width: 160px;
+  }
 }
 
 .slider-desc-title__letter {
@@ -52,13 +61,20 @@
   font-family: 'Roboto';
   font-weight: 500;
   font-style: normal;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   margin-top: 40px;
   margin-bottom: 40px;
   width: 100%;
   border-top: 1px solid rgba(#20b5a1, 0.3);
   border-bottom: 1px solid rgba(#20b5a1, 0.3);
+  @include tablets {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  @include phone() {
+    font-size: 14px;
+  }
 }
 
 .slider-desc-link {
@@ -90,6 +106,9 @@
   font-weight: 500;
   font-style: normal;
   vertical-align: middle;
+  @include phone() {
+    font-size: 14px;
+  }
 }
 
 .slider-demo-list {

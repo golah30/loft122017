@@ -12,6 +12,9 @@
       fill: #ffffff;
     }
   }
+  @include phone() {
+    min-height: 575px;
+  }
 }
 
 .feedback {
@@ -23,6 +26,9 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 150px;
+  @include tablets() {
+    padding-bottom: 240px;
+  }
 }
 
 .feedback-title {
@@ -32,6 +38,16 @@
   margin-bottom: 70px;
   width: 273px;
   text-align: center;
+  @include tablets() {
+    width: 370px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  @include phone() {
+    width: 160px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
   .block-title {
     &::after {
       top: calc(35px - 2.5px);
@@ -40,6 +56,12 @@
       top: calc(35px - 2.5px);
     }
     font-size: 63px;
+    @include tablets() {
+      font-size: 49px;
+    }
+    @include phone() {
+      font-size: 35px;
+    }
   }
   img {
     position: absolute;
@@ -48,6 +70,17 @@
     top: -30px;
     left: 54%;
     transform: translateX(-50%);
+    @include tablets() {
+      height: 140px;
+      width: 393px;
+      top: -45px;
+      left: 51%;
+    }
+    @include tablets() {
+      height: 85px;
+      width: 248px;
+      top: -5px;
+    }
   }
 }
 
@@ -55,6 +88,11 @@
   z-index: 20;
   margin-bottom: 70px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @include tablets() {
+    margin-bottom: 50px;
+  }
 }
 .feedback-form-block {
   z-index: 20;
@@ -63,6 +101,9 @@
   margin-bottom: 150px;
   border-radius: 5px;
   overflow: hidden;
+  @include phone() {
+    width: 90%;
+  }
 }
 .feedback-bg {
   z-index: 10;
@@ -93,6 +134,9 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: -575px;
+    @include tablets() {
+      bottom: -665px;
+    }
     filter: url('../img/icons/filter.svg#blur');
   }
 }
@@ -101,20 +145,27 @@
   text-align: center;
   margin-top: 30px;
   margin-bottom: 40px;
+  @include phone() {
+    margin-bottom: 25px;
+  }
+  .block-title {
+    @include phone() {
+      font-size: 21px;
+    }
+  }
 }
 .feedback-form {
   position: relative;
 }
 
 .feedback-form__input {
-  margin: 0 20px;
+  margin: 0 7%;
   height: 45px;
   width: 340px;
   margin-bottom: 20px;
   border-radius: 5px;
   overflow: hidden;
   border: none;
-
   padding-right: 20px;
   padding-left: 20px;
   font-family: 'Roboto';
@@ -122,6 +173,9 @@
   font-style: normal;
   line-height: 16px;
   font-size: 16px;
+  @include phone() {
+    width: 86%;
+  }
 }
 textarea.feedback-form__input {
   resize: none;

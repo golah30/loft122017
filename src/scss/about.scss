@@ -330,7 +330,7 @@
   margin-top: 20px;
   text-align: center;
   @include tablets() {
-    justify-content: center;
+    justify-content: space-around;
   }
   @include phone() {
     justify-content: space-around;
@@ -348,6 +348,9 @@
   @include note() {
     width: 110px;
     height: 110px;
+  }
+  @include tablets() {
+    margin-right: 0;
   }
   @include phone() {
     margin-right: 0;

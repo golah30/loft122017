@@ -3,14 +3,29 @@
   flex-direction: column;
   width: 380px;
   margin-right: 20px;
+  margin-bottom: 30px;
   &:last-child {
     margin-right: 0;
+    margin-bottom: 0;
+  }
+  @include tablets() {
+    width: 310px;
+    margin-right: 0;
+  }
+  @include phone() {
+    width: 95%;
   }
 }
 .note__icon {
   font-size: 36px;
   opacity: 0.2;
   margin-bottom: 20px;
+  @include phone() {
+    text-align: center;
+  }
+}
+.note__qoute {
+  display: inline-block;
 }
 .note__content {
   font-size: 16px;
@@ -20,6 +35,11 @@
   line-height: 26px;
   margin-bottom: 25px;
   color: #455a64;
+  @include phone() {
+    width: 95%;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
 }
 .note-author__title {
   font-size: 16px;
@@ -28,6 +48,9 @@
   font-weight: bold;
   font-style: normal;
   margin-bottom: 8px;
+  @include phone() {
+    font-size: 14px;
+  }
 }
 .note-author__subtitle {
   font-size: 16px;
@@ -35,12 +58,19 @@
   font-family: 'Roboto';
   font-weight: normal;
   font-style: normal;
+  @include phone() {
+    font-size: 14px;
+  }
 }
 .note-author__photo {
   width: 78px;
   height: 78px;
   border-radius: 50%;
   overflow: hidden;
+  @include phone() {
+    width: 50px;
+    height: 50px;
+  }
   img {
     width: 100%;
   }

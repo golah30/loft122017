@@ -9,6 +9,10 @@
   width: 100%;
   @include tablets() {
     flex-wrap: nowrap;
+    height: 1010px;
+  }
+  @include phone() {
+    height: 575px;
   }
 }
 
@@ -16,6 +20,12 @@
   width: 50%;
   height: 100%;
   background: #f0efe9;
+  @include tablets() {
+    height: 270px;
+  }
+  @include phone() {
+    height: 220px;
+  }
 }
 
 .slider-demo {
@@ -23,6 +33,11 @@
   height: 70%;
   background: #efebe0;
   @include tablets() {
+    height: 530px;
+    order: -10;
+  }
+  @include phone() {
+    height: 260px;
     order: -10;
   }
 }
@@ -32,6 +47,12 @@
   height: 30%;
   display: flex;
   position: relative;
+  @include tablets() {
+    height: 210px;
+  }
+  @include phone() {
+    height: 95px;
+  }
 }
 
 .slider-desc,
@@ -47,5 +68,8 @@
   width: 420px;
   margin: auto;
   text-align: center;
+  @include tablets {
+    width: 480px;
+  }
 }
 @import 'modules/slider-content';
