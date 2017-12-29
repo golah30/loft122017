@@ -6,14 +6,13 @@
 .about-hero {
   min-height: 600px;
   height: 100vh;
-  width: 100vw;
+
   background: url('../img/bg.jpg');
   background-size: cover;
   position: relative;
 }
 
 .container {
-  width: 100vw;
   height: 100%;
   position: relative;
   background: rgba(38, 166, 154, 0.25);
@@ -114,7 +113,6 @@
 .about-desc {
   display: flex;
   position: relative;
-  width: 100vw;
   @include tablets() {
     flex-wrap: wrap;
   }
@@ -319,8 +317,7 @@
     margin-bottom: 30px;
   }
 }
-.skills__group {
-}
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
