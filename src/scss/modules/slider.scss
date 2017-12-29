@@ -1,0 +1,57 @@
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.slider-content {
+}
+
+.slider {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  @include tablets() {
+    flex-wrap: nowrap;
+  }
+}
+
+.slider-desc {
+  width: 50%;
+  height: 100%;
+  background: #f0efe9;
+}
+
+.slider-demo {
+  width: 50%;
+  height: 70%;
+  background: #efebe0;
+  @include tablets() {
+    order: -10;
+  }
+}
+
+.slider-controls {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  position: relative;
+}
+
+.slider-desc,
+.slider-demo,
+.slider-controls {
+  display: flex;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.slider-container {
+  width: 420px;
+  margin: auto;
+  text-align: center;
+}
+@import 'modules/slider-content';

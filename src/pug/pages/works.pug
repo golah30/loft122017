@@ -22,6 +22,7 @@ block content
     section.works
         .container-svg-triangles
             include ../modules/triangle.pug
+        include ../modules/slider.pug
     section.feedback
         .feedback-bg
             img(src="./img/feedback.png", alt="")
@@ -33,9 +34,15 @@ block content
             +note('Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!', 'Сабанцев Владимир', 'преподаватель', './img/vs.png')
         .feedback-form-block
             .filter
-                svg(viewbox="0 0 100 100")
-                    defs
-                        filter(id="blur")  
-                            feGaussianBlur(stdDeviation="10")
-                    rect(x="0" y="0" width="100" height="100" filter="url(#blur)" style="fill-opacity: 1; fill: red;")
+                img(src="./img/feedback.png", alt="")  
+            .feedback-form-title
+                +title('Связаться со мной')
+            form.feedback-form
+                input.feedback-form__input(type="text" placeholder='Имя')
+                input.feedback-form__input(type="text" placeholder='Email')
+                textarea.feedback-form__input(placeholder='Ваше сообщение')
+                .feedback-form__buttons
+                    input.feedback-form__button(type="submit" value='Отправить' class='feedback-form__button--after')
+                    input.feedback-form__button(type="reset" value='Очистить')    
+                      
         +footer(1)

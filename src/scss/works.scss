@@ -1,8 +1,9 @@
 @import 'modules/note';
+@import 'modules/slider';
 .works {
   position: relative;
-  height: 100vh;
-  background: red;
+  min-height: 100vh;
+  background: #ffffff;
   .container-svg-triangles {
     .right {
       fill: #ffffff;
@@ -16,8 +17,6 @@
 .feedback {
   position: relative;
   overflow: hidden;
-  //   background: url('../img/feedback.png');
-  //   background-size: 100% 100%;
   background-color: #ffffff;
   min-height: 100vh;
   display: flex;
@@ -25,19 +24,7 @@
   align-items: center;
   padding-bottom: 150px;
 }
-.feedback-bg {
-  z-index: 10;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  width: 100%;
-  img {
-    position: absolute;
-    bottom: -500px;
-  }
-}
+
 .feedback-title {
   z-index: 20;
   position: relative;
@@ -66,23 +53,105 @@
 
 .feedback-notes {
   z-index: 20;
+  margin-bottom: 70px;
   display: flex;
 }
 .feedback-form-block {
   z-index: 20;
   position: relative;
   width: 380px;
-  height: 440px;
+  margin-bottom: 150px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.feedback-bg {
+  z-index: 10;
+  position: absolute;
+  opacity: 1;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  img {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: -275px;
+  }
 }
 .filter {
   position: absolute;
-  top: 0;
-  z-index: 30;
-  left: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   height: 100%;
   width: 100%;
-  svg {
-    width: 100%;
-    height: 100%;
+  overflow: hidden;
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -575px;
+    filter: url('../img/icons/filter.svg#blur');
   }
+}
+
+.feedback-form-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.feedback-form {
+  position: relative;
+}
+
+.feedback-form__input {
+  margin: 0 20px;
+  height: 45px;
+  width: 340px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: none;
+
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 16px;
+  font-size: 16px;
+}
+textarea.feedback-form__input {
+  resize: none;
+  height: 140px;
+  padding-top: 15px;
+}
+.feedback-form__buttons {
+  font-size: 0;
+}
+.feedback-form__button {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 45px;
+  background: rgba(#26bcaa, 1);
+  border: none;
+  width: 50%;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+  padding: 0;
+  color: #ffffff;
+  transition: background-color 0.3s;
+  border-left: 1px solid rgba(#ffffff, 0.5);
+  &:hover {
+    background: rgba(#26bcaa, 0.3);
+  }
+}
+.feedback-form__button--after {
+  border-left: none;
+  border-right: 1px solid rgba(#ffffff, 0.5);
 }

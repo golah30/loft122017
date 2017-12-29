@@ -1,7 +1,8 @@
 const mod = require('./modules/console.js');
+const slider = require('./modules/slider.js');
 
-console.log(1);
-mod(3);
+slider();
+
 var map = new google.maps.Map(document.querySelector('.about-contacts__map'), {
   center: { lat: 48.575, lng: 35.09 },
   zoom: 17,

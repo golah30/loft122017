@@ -2,8 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
     <filter id="blur">  
-    <feGaussianBlur stdDeviation="5"/>
+    <feGaussianBlur stdDeviation="20"/>
   </filter>
 </defs>
-  <rect x="50" y="20" width="150" height="150" class="svg-rect"/>
 </svg>
