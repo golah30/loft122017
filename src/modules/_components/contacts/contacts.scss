@@ -1,0 +1,28 @@
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contacts__item {
+  margin-bottom: 25px;
+  display: flex;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.contact__icon {
+  width: 24px;
+  height: 24px;
+}
+.contact__icon-icon {
+  width: 100%;
+  height: 100%;
+  fill: #00bea4;
+}
+.contact__desc {
+  margin-left: 10px;
+  color: #455a64;
+}

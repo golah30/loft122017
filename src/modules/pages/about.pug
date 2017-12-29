@@ -1,0 +1,81 @@
+extends ../main.pug
+include ../_components/title/title.pug
+include ../_components/skillsvg/skillsvg.pug
+include ../_components/contacts/contacts.pug
+include ../_components/footer/footer.pug
+block var
+    - var title = 'Обо мне'
+
+block content
+    section.about-hero
+        .container
+            .svg-background
+                img(src="./img/portfolio_header.svg", alt="")
+            .hero__persone.hero__persone--bigger
+                include ../_components/persone/persone.pug
+            .hero__socials.hero__socials--white
+                include ../_components/socials/socials.pug
+            a.hero__arrow(href='#')
+                img(src="./img/arrow.svg", alt="")
+            .hamburger
+                img(src="./img/hamburger.svg")
+    section.about-desc
+        .container-svg-triangles
+            include ../_components/triangle/triangle.pug
+        .container-left
+            .about-desc-title
+                img.about-desc-title__svg-back(src="./img/icons/about_header.svg", alt="")
+                +title('Обо мне')
+            .about-desc-content
+                .about-content__avatar
+                    img(src="./img/avatar.jpg", alt="Аватар")
+                .about-content__title
+                    +title('Кто я')
+                .about-content__desc
+                    p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p Этот сайт я сделал в рамках обучения в школе онлайн образования LoftSchool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
+        .container-right
+            .about-skills__title
+                +title('Чем я могу быть вам полезен')
+            .skills__desc
+                p Больше всего меня привлекает Frontend-разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .skills-container
+                .skills__group
+                    +skill_title('Frontend')
+                    ul.skills-list
+                        .skills-list__item
+                            +skill_item('HTML5', 'circle-85')
+                        .skills-list__item
+                            +skill_item('CSS3', 'circle-90')
+                        .skills-list__item
+                            +skill_item('JavaScript & jQuery', 'circle-95')   
+                .skills__group
+                    +skill_title('Backend')
+                    ul.skills-list
+                        .skills-list__item
+                            +skill_item('PHP', 'circle-45')
+                        .skills-list__item
+                            +skill_item('mySQL', 'circle-55')
+                        .skills-list__item
+                            +skill_item('Node.js & npm', 'circle-45')
+                        .skills-list__item
+                            +skill_item('Mongo.db', 'circle-65')
+                .skills__group
+                    +skill_title('WorkFlow')
+                    ul.skills-list
+                        .skills-list__item
+                            +skill_item('Git', 'circle-90')
+                        .skills-list__item
+                            +skill_item('Gulp', 'circle-70')
+                        .skills-list__item
+                            +skill_item('Bower', 'circle-60')
+    section.about-contacts
+        .about-contacts__map 
+        .contacts-block 
+            .contacts__title
+                +title('Контакты')
+            .contacts__desc
+                +contacts(["./img/icons/sprite.svg#skype",'./img/icons/sprite.svg#mail','./img/icons/sprite.svg#phone', './img/icons/sprite.svg#mark'], ['skype_kdn', 'astahov@gmail.com', '+7 931 200 93 24', 'г. Новосибирск, ул. Инская, д. 5'])
+        +footer(2)
+    
+

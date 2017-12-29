@@ -1,0 +1,134 @@
+.auth-form {
+  display: inline-block;
+}
+.auth-form-row {
+  display: flex;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.auth-form-row--last {
+  margin-bottom: 40px;
+}
+.authform-row--centered {
+  justify-content: center;
+}
+.auth-input__label {
+  width: 45px;
+  height: 45px;
+  background-color: #f0efe9;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 18px;
+  }
+}
+.auth-input__input {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  border: none;
+  width: 296px;
+  padding-left: 20px;
+  color: #373e42;
+  background: #fff;
+}
+
+.auth-input__check-label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  color: #455a64;
+  font-size: 16px;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  span {
+    margin-left: 10px;
+  }
+}
+.auth-input__check {
+  position: absolute;
+  left: -999999px;
+}
+.custom-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 2px;
+  border: 1px solid #d1d1d1;
+  background: #ffffff;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transition: background-color 0.2s ease-in-out;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11px;
+    height: 9px;
+  }
+}
+.auth-input__check:checked + .auth-input__check-label .custom-checkbox {
+  background: #00bfa5;
+}
+.auth-input__radio-desc {
+  color: #455a64;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.auth-input__radio {
+  position: relative;
+}
+#radio1,
+#radio2 {
+  position: absolute;
+  left: -99999px;
+}
+
+.auth-input__radio-label {
+  padding-left: 30px;
+  position: relative;
+  &::before {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #d1d1d1;
+    background-color: #ffffff;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    content: '';
+  }
+  &::after {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    overflow: hidden;
+    content: '';
+    transition: background-color 0.2s ease-in-out;
+  }
+}
+#radio1:checked + .auth-input__radio-label::after,
+#radio2:checked + .auth-input__radio-label::after {
+  background-color: #00bfa5;
+}
+.auth-input__radio-label--margin {
+  margin-right: 40px;
+}

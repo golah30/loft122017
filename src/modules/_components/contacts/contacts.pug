@@ -1,0 +1,22 @@
+mixin contacts(icons, content)
+    ul.contacts__list
+        li.contacts__item
+            .contact__icon
+                svg(class="contact__icon-icon")
+                    use(xlink:href=icons[0])
+            .contact__desc=content[0]
+        li.contacts__item
+            .contact__icon
+                svg(class="contact__icon-icon")
+                    use(xlink:href=icons[1])
+            .contact__desc=content[1]
+        li.contacts__item
+            .contact__icon
+                svg(class="contact__icon-icon")
+                    use(xlink:href=icons[2])
+            .contact__desc=content[2]
+        li.contacts__item
+            .contact__icon
+                svg(class="contact__icon-icon")
+                    use(xlink:href=icons[3])
+            .contact__desc=content[3]

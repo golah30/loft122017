@@ -1,0 +1,19 @@
+extends ../main.pug
+include ../_components/title/title.pug
+
+block var
+    - var title = 'Авторизация'
+
+block content
+    .welcome-wrap
+        .welcome-block
+            .wel-bg
+            .login-title
+                +title('Авторизуйтесь')
+
+            .auth-block
+                include ../_components/auth-form/auth-form.pug
+            .welcome__menu
+                include ../_components/auth-menu/auth-menu.pug
+        .welcome-text
+           span © Владимир Астахов | создано с любовью в LoftSchool | 2016

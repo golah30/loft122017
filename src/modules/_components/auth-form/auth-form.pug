@@ -1,0 +1,26 @@
+form.auth-form(action='')
+    .auth-form-row
+        label.auth-input__label(for="login")
+            img(src="./img/icons/login.svg", alt="Login")
+        input.auth-input__input(type="text" id='login' name='login' placeholder='Логин')
+    .auth-form-row        
+        label.auth-input__label(for="pass")
+            img(src="./img/icons/password.svg", alt="Password")
+        input.auth-input__input(type="password" id="pass" name="password" placeholder='Пароль')
+    .auth-form-row.authform-row--centered
+        input.auth-input__check(type="checkbox" id='check' aria-hidden="true")
+        label.auth-input__check-label(for="check" aria-hidden="true") 
+            .custom-checkbox
+                img(src="./img/icons/check.svg", alt="")
+            span Я человек
+    .auth-form-row.authform-row--centered.auth-form-row--last
+        div
+            .auth-input__radio-desc Вы точно не робот?
+            .auth-input__radio
+                input(type="radio", name="isbot", value='yes',id='radio1')
+                label.auth-input__radio-label.auth-input__radio-label--margin(for="radio1" aria-hidden="true") Да
+                input(type="radio", name="isbot", value='no', id='radio2')
+                label.auth-input__radio-label(for="radio2" aria-hidden="true") Не уверен
+                
+
+        
