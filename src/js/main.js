@@ -1,5 +1,7 @@
 const mod = require('./modules/console.js');
 const slider = require('./modules/slider.js');
+const hamburger = require('./modules/hamburger.js');
+hamburger();
 if (document.querySelector('.slider')) slider();
 
 var map = new google.maps.Map(document.querySelector('.about-contacts__map'), {

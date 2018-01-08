@@ -3,6 +3,7 @@
 @import '../../_components/skillsvg/skills';
 @import '../../_components/footer/footer';
 @import '../../_components/contacts/contacts';
+@import '../../_components/hamburger/hamburger';
 .about-hero {
   min-height: 600px;
   height: 100vh;
@@ -91,23 +92,6 @@
   }
   img {
     width: 100%;
-  }
-}
-.hamburger {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 40px;
-  height: 35px;
-  cursor: pointer;
-  img {
-    width: 100%;
-  }
-  @include phone() {
-    top: 10px;
-    right: 10px;
-    width: 25px;
-    height: 22px;
   }
 }
 .about-desc {

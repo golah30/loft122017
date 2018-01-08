@@ -67,6 +67,14 @@
   position: relative;
   min-height: 600px;
   padding-bottom: 150px;
+  @include tablets() {
+    padding-top: 50px;
+    padding-bottom: 240px;
+  }
+  @include phone() {
+    padding-top: 35px;
+    padding-bottom: 270px;
+  }
   .container-svg-triangles {
     .right {
       fill: #ffffff;
@@ -79,6 +87,10 @@
 .posts {
   min-width: 320px;
   padding: 0 20px;
+  @include phone() {
+    min-width: 300px;
+    padding: 0;
+  }
 }
 .container-blog {
   position: relative;
@@ -88,6 +100,12 @@
 .blog-post {
   position: relative;
   margin-bottom: 125px;
+  @include tablets() {
+    margin-bottom: 100px;
+  }
+  @include phone() {
+    margin-bottom: 60px;
+  }
   &::after {
     content: '';
     display: block;
@@ -96,6 +114,12 @@
     height: 5px;
     background: #f1f1f2;
     bottom: -62.5px;
+    @include tablets() {
+      bottom: -50px;
+    }
+    @include phone() {
+      bottom: -30px;
+    }
   }
   &:last-child {
     &::after {
@@ -105,8 +129,17 @@
 }
 .blog-post__title {
   margin-bottom: 30px;
+  @include tablets() {
+    margin-bottom: 20px;
+  }
   .block-title {
     text-align: center;
+    @include tablets() {
+      font-size: 30px;
+    }
+    @include phone() {
+      font-size: 21px;
+    }
     &::after {
       display: none;
     }
@@ -122,6 +155,10 @@
   font-style: normal;
   color: #00bfa5;
   margin-bottom: 25px;
+  @include tablets() {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
 
 .blog-post__content {
@@ -135,6 +172,9 @@
     font-weight: normal;
     font-style: normal;
     margin-bottom: 20px;
+    @include tablets() {
+      font-size: 14px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
