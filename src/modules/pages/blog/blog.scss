@@ -97,6 +97,15 @@
   margin: 0 3%;
   display: flex;
 }
+.blog-nav {
+  margin-right: 5%;
+  min-width: 270px;
+  position: relative;
+  @include tablets() {
+    margin-right: 0%;
+    min-width: 0px;
+  }
+}
 .blog-post {
   position: relative;
   margin-bottom: 125px;

@@ -1,9 +1,16 @@
 const mod = require('./modules/console.js');
 const slider = require('./modules/slider.js');
 const hamburger = require('./modules/hamburger.js');
+const blog = require('./modules/blog.js');
+const scrollto = require('./modules/scrollto.js');
+const animate = require('./modules/animation.js');
 hamburger();
-if (document.querySelector('.slider')) slider();
 
+if (document.querySelector('.container-blog')) blog();
+if (document.querySelector('.slider')) slider();
+window.onload = function() {
+  scrollto(animate, 700);
+};
 var map = new google.maps.Map(document.querySelector('.about-contacts__map'), {
   center: { lat: 48.575, lng: 35.09 },
   zoom: 17,
