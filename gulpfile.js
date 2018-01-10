@@ -26,6 +26,7 @@ const paths = {
   },
   scss: {
     src: './src/modules/main.scss',
+    sub: './src/modules/preloader.scss',
     watch: './src/modules/**/**/*.scss',
     dest: './build/styles/'
   },
@@ -63,6 +64,16 @@ function styles() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.scss.dest));
 }
+function substyles() {
+  return gulp
+    .src(paths.scss.sub)
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemaps.write())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.scss.dest));
+}
 
 // clean dest dir
 function clean() {
@@ -91,10 +102,10 @@ function subscripts() {
 
 // галповский вотчер
 function watch() {
-  gulp.watch(paths.scss.watch, styles);
+  gulp.watch(paths.scss.watch, gulp.series(styles, substyles));
   gulp.watch(paths.pug.src, pages);
   gulp.watch(paths.img.src, img);
-  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.scripts.src, gulp.series(scripts, subscripts));
 }
 
 // локальный сервер + livereload (встроенный)
@@ -109,7 +120,7 @@ gulp.task(
   'default',
   gulp.series(
     clean,
-    gulp.parallel(styles, pages, img, scripts, subscripts, fonts),
+    gulp.parallel(styles, substyles, pages, img, scripts, subscripts, fonts),
     gulp.parallel(server, watch)
   )
 );
