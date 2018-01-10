@@ -35,7 +35,8 @@ const paths = {
   },
   scripts: {
     src: './src/js/**/*.js',
-    dest: './build/js/'
+    dest: './build/js/',
+    sub: './build/js/pre/'
   },
   fonts: {
     src: './src/fonts/**/*.*',
@@ -84,6 +85,9 @@ function scripts() {
     .pipe(babel())
     .pipe(gulp.dest(paths.scripts.dest));
 }
+function subscripts() {
+  return gulp.src('src/js/preloader.js').pipe(gulp.dest(paths.scripts.sub));
+}
 
 // галповский вотчер
 function watch() {
@@ -105,7 +109,7 @@ gulp.task(
   'default',
   gulp.series(
     clean,
-    gulp.parallel(styles, pages, img, scripts, fonts),
+    gulp.parallel(styles, pages, img, scripts, subscripts, fonts),
     gulp.parallel(server, watch)
   )
 );
