@@ -29,15 +29,16 @@ module.exports = function() {
       let container = document.querySelector('.paralax-container'),
         loaded = parseInt(container.getAttribute('data-loaded'));
       loaded++;
-      console.log(loaded);
-
       container.setAttribute('data-loaded', loaded);
-
+      container.classList.add('paralax-container--after-' + loaded);
+      let l = loaded - 1;
+      container.classList.remove('paralax-container--after-' + l);
       if (loaded == 10) {
         setTimeout(() => {
           document
             .querySelector('.welcome-wrap')
             .classList.remove('background-tablets');
+          container.classList.remove('paralax-container--after-10');
         }, 300);
       }
     };

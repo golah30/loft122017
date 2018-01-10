@@ -5,6 +5,70 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  &:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 350;
+    background: #00bfa5;
+    transition: width 0.4s;
+  }
+}
+.paralax-container--after- {
+  &1 {
+    &:after {
+      width: 10%;
+    }
+  }
+  &2 {
+    &:after {
+      width: 20%;
+    }
+  }
+  &3 {
+    &:after {
+      width: 30%;
+    }
+  }
+  &4 {
+    &:after {
+      width: 40%;
+    }
+  }
+  &5 {
+    &:after {
+      width: 50%;
+    }
+  }
+  &6 {
+    &:after {
+      width: 60%;
+    }
+  }
+  &7 {
+    &:after {
+      width: 70%;
+    }
+  }
+  &8 {
+    &:after {
+      width: 80%;
+    }
+  }
+  &9 {
+    &:after {
+      width: 90%;
+    }
+  }
+  &10 {
+    &:after {
+      width: 100%;
+    }
+  }
 }
 
 .paralax__layer {
