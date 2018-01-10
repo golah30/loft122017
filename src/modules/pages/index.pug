@@ -4,7 +4,7 @@ block var
     - var title = 'Добро пожаловать'
 
 block content
-    .welcome-wrap
+    .welcome-wrap.background-tablets
         .welcome-auth-block
             include ../_components/auth-button/auth-button.pug
         .welcome-block
@@ -17,3 +17,4 @@ block content
                 include ../_components/menu/menu.pug
         .welcome-text
            span © Владимир Астахов | создано с любовью в LoftSchool | 2016
+    include ../_components/paralax/paralax.pug

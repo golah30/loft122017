@@ -21,14 +21,3 @@ module.exports = function(animate, duration) {
     animate(scroll, duration);
   });
 };
-
-// window.onscroll = function() {
-//   console.log(
-//     target.getBoundingClientRect().top +
-//       'Верх елемента' +
-//       ';' +
-//       window.pageYOffset +
-//       'Прокрутка текущая' +
-//       document.documentElement.scrollTop
-//   );
-// };

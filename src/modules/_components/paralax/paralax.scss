@@ -1,0 +1,63 @@
+.paralax-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.paralax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.paralax__img {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+}
+.paralax__img--7 {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.paralax__img--6 {
+  display: block;
+  transform: translate(-48%, -27.5%);
+}
+.paralax__img--5 {
+  display: block;
+  transform: translate(-55.5%, -25%);
+}
+
+.paralax__img--cloud1 {
+  display: block;
+  transform: translate(-65.5%, -16%) scale(0.6);
+}
+.paralax__img--cloud2 {
+  display: block;
+  transform: translate(-56.5%, -56%) scale(0.3);
+}
+.paralax__img--cloud3 {
+  transform: translate(-21.5%, -68%) scale(0.3);
+  display: block;
+}
+.paralax__img--4 {
+  display: block;
+  transform: translate(-63.5%, -34%);
+}
+.paralax__img--3 {
+  display: block;
+  transform: translate(-54%, -21%);
+}
+.paralax__img--2 {
+  display: block;
+  transform: translate(-43%, -5%);
+}
+.paralax__img--1 {
+  transform: translate(-44%, -27%);
+}

@@ -5,7 +5,7 @@ block var
     - var title = 'Авторизация'
 
 block content
-    .welcome-wrap
+    .welcome-wrap.background-tablets
         .welcome-block
             .wel-bg
             .login-title
@@ -17,3 +17,4 @@ block content
                 include ../_components/auth-menu/auth-menu.pug
         .welcome-text
            span © Владимир Астахов | создано с любовью в LoftSchool | 2016
+    include ../_components/paralax/paralax.pug

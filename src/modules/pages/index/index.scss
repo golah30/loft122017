@@ -1,7 +1,13 @@
 .welcome-wrap {
+  z-index: 200;
   height: 100%;
   width: 100%;
   position: relative;
+  @include tablets() {
+    z-index: 201;
+  }
+}
+.background-tablets {
   background: url('../img/bg.jpg');
   background-size: cover;
 }
@@ -60,3 +66,4 @@
 @import '../../_components/persone/persone';
 @import '../../_components/menu/menu';
 @import '../../_components/socials/socials';
+@import '../../_components/paralax/paralax';
