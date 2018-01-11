@@ -5,6 +5,7 @@ const blog = require('./modules/blog.js');
 const scrollto = require('./modules/scrollto.js');
 const animate = require('./modules/animation.js');
 const paralax = require('./modules/paralax.js');
+const flip = require('./modules/flip.js');
 
 window.onload = function() {
   if (document.querySelector('.hero__arrow')) scrollto(animate, 700);
@@ -12,6 +13,7 @@ window.onload = function() {
   if (document.querySelector('.hamburger')) hamburger();
   if (document.querySelector('.container-blog')) blog();
   if (document.querySelector('.slider')) slider();
+  if (document.querySelector('.flip')) flip();
 };
 if (document.querySelector('.about-contacts__map'))
   var map = new google.maps.Map(

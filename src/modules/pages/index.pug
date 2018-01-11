@@ -1,4 +1,5 @@
 extends ../main.pug
+include ../_components/title/title.pug
 
 block var
     - var title = 'Добро пожаловать'
@@ -8,13 +9,22 @@ block content
         .welcome-auth-block
             include ../_components/auth-button/auth-button.pug
         .welcome-block
-            .wel-bg
-            .welcome__persone
-                include ../_components/persone/persone.pug
-            .welcome__social
-                include ../_components/socials/socials.pug
-            .welcome__menu
-                include ../_components/menu/menu.pug
+            .flip
+                .wel-bg
+                .welcome.welcome--active
+                    .welcome__persone
+                        include ../_components/persone/persone.pug
+                    .welcome__social
+                        include ../_components/socials/socials.pug
+                    .welcome__menu
+                        include ../_components/menu/menu.pug
+                .auth
+                    .login-title
+                        +title('Авторизуйтесь')
+                    .auth-block
+                        include ../_components/auth-form/auth-form.pug
+                    .welcome__menu
+                        include ../_components/auth-menu/auth-menu.pug
         .welcome-text
            span © Владимир Астахов | создано с любовью в LoftSchool | 2016
     include ../_components/paralax/paralax.pug

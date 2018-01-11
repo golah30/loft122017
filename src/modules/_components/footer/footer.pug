@@ -15,7 +15,7 @@ mixin footer(active)
 
 mixin footerMenu(active)
     ul.footer-menu
-        each val, index in {1: ['Мои работы', './works.html'], 2: ['Обо мне', './about.html'], 3: ['Блог', './blog.html'], 4: ['Авторизация', './login.html']}
+        each val, index in {1: ['Мои работы', './works.html'], 2: ['Обо мне', './about.html'], 3: ['Блог', './blog.html'], 4: ['Авторизация', './index.html']}
             li.footer-menu__item(class=''+ index==active ? 'footer-menu__item--active' : '')
                 a.footer-menu__link(href=val[1])=val[0]
 
