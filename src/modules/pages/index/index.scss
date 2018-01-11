@@ -33,21 +33,21 @@
   transition: all 1s ease;
   transform-style: preserve-3d;
   transform-origin: 50% 50%;
-  transform: perspective(900px) rotate3d(0, 1, 0, 0deg);
-}
-.flip--active {
   transform: perspective(900px) rotate3d(0, 1, 0, -180deg);
 }
+.flip--active {
+  transform: perspective(900px) rotate3d(0, 1, 0, 0deg);
+}
 .welcome {
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  transform: perspective(900px) rotate3d(0, 1, 0, -180deg);
   display: none;
 }
 .welcome--active {
   display: block;
 }
 .auth {
-  transform-style: preserve-3d;
-  transform-origin: 50% 50%;
-  transform: perspective(900px) rotate3d(0, 1, 0, -180deg);
   display: none;
 }
 .auth--active {
