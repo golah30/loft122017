@@ -94,12 +94,19 @@
   text-align: center;
   display: block;
   margin-bottom: 85px;
+  transform: scale(1.7);
+  opacity: 0;
+  transition: opacity 0.4s, transform 0.4s;
   &:last-child {
     margin-bottom: 0;
   }
   @include phone() {
     margin-bottom: 50px;
   }
+}
+.hamburger-menu__item--active {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .hamburger-menu__link {
